@@ -24,7 +24,7 @@ function EditData() {
   // Fetch main details from backend
   const fetchMainDetails = async () => {
     try {
-      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/details/main`);
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/details/main`);
       if (response.ok) {
         const data = await response.json();
         setMainDetails(data);
@@ -42,7 +42,7 @@ function EditData() {
       return;
     }
     try {
-      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/details/sub/${encodeURIComponent(mainDetail)}`);
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/details/sub/${encodeURIComponent(mainDetail)}`);
       if (response.ok) {
         const data = await response.json();
         setSubDetails(data);
@@ -72,7 +72,7 @@ function EditData() {
     setMessage("");
 
     try {
-        const response = await fetch(`${process.env.REACT_APP_API_URL}/api/details/main`, {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/details/main`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -106,7 +106,7 @@ function EditData() {
     setMessage("");
 
     try {
-        const response = await fetch(`${process.env.REACT_APP_API_URL}/api/details/main`, {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/details/main`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -144,7 +144,7 @@ function EditData() {
     setMessage("");
 
     try {
-        const response = await fetch(`${process.env.REACT_APP_API_URL}/api/details/main`, {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/details/main`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
@@ -180,7 +180,7 @@ function EditData() {
     setMessage("");
 
     try {
-        const response = await fetch(`${process.env.REACT_APP_API_URL}/api/details/sub`, {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/details/sub`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -217,7 +217,7 @@ function EditData() {
     setMessage("");
 
     try {
-        const response = await fetch(`${process.env.REACT_APP_API_URL}/api/details/sub`, {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/details/sub`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -256,7 +256,7 @@ function EditData() {
     setMessage("");
 
     try {
-        const response = await fetch(`${process.env.REACT_APP_API_URL}/api/details/sub`, {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/details/sub`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
