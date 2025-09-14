@@ -15,7 +15,7 @@ const ExcelFormat = () => {
 
   const fetchProductionData = async () => {
     try {
-      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/production`);
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/production`);
       if (response.ok) {
         const productionData = await response.json();
         
@@ -128,9 +128,7 @@ const ExcelFormat = () => {
           <div>
             <h2 className="text-xl font-semibold text-gray-800">Production Data - Excel Format</h2>
             <div className="mt-2 text-sm text-gray-600">
-              <p><strong>Main Details Found:</strong> {uniqueMainDetails.join(', ')}</p>
-              <p><strong>Sub Details Found:</strong> {uniqueSubDetails.join(', ')}</p>
-              <p><strong>Dynamic Columns:</strong> {allUniqueValues.length} columns will be created</p>
+             
             </div>
           </div>
           <button 
