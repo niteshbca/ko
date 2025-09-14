@@ -14,7 +14,7 @@ function AddEmployees() {
   // Fetch employees from backend
   const fetchEmployees = async () => {
     try {
-      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/employees`);
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/employees`);
       
       if (response.ok) {
         const data = await response.json();
@@ -49,7 +49,7 @@ function AddEmployees() {
     setMessage("");
 
     try {
-      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/employees`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/employees`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -80,7 +80,7 @@ function AddEmployees() {
 
   const handleDeleteEmployee = async (id) => {
     try {
-      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/employees/${id}`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/employees/${id}`, {
         method: 'DELETE',
       });
 
