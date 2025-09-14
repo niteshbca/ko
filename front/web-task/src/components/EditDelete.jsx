@@ -16,7 +16,7 @@ const EditDelete = () => {
   const fetchProductionData = async () => {
     setLoading(true);
     try {
-      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/production`);
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/production`);
       if (response.ok) {
         const productionData = await response.json();
         setData(productionData);
@@ -50,7 +50,7 @@ const EditDelete = () => {
 
   const handleSaveEdit = async () => {
     try {
-      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/production/${editingId}`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/production/${editingId}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -81,7 +81,7 @@ const EditDelete = () => {
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this row?")) {
       try {
-        const response = await fetch(`${process.env.REACT_APP_API_URL}/api/production/${id}`, {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/production/${id}`, {
           method: 'DELETE',
         });
 
