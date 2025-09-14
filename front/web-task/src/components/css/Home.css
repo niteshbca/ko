@@ -1,0 +1,10 @@
+.bgColor {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(
+    to bottom,
+    left,
+    rgba(99, 119, 192, 1),
+    rgba(12, 28, 98, 1)
+  );
+}

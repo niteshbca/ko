@@ -1,0 +1,103 @@
+.admin-container {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+    to right,
+    rgba(99, 119, 192, 1),
+    rgba(12, 28, 98, 1)
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.centered-content {
+  /* background-color: pink; */
+  border-radius: 16px;
+  padding: 40px;
+  /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); */
+  text-align: center;
+  width: 85%;
+  max-width: 800px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.welcomeTo {
+  margin-top: 0%;
+}
+
+.admindash-content {
+  width: 400px;
+  height: 485px;
+  border: 1px solid rgba(135, 159, 241, 1);
+  border-radius: 50px;
+  background: radial-gradient(
+    rgba(255, 255, 255, 0) 10%,
+    rgba(255, 255, 255, 0.06) 100%
+  );
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+p {
+  margin-top: 50px;
+  font-size: 1.5rem;
+  font-family: "calibri light";
+}
+h3 {
+  margin-top: 10px;
+  margin-bottom: 35px;
+  font-size: 1.5rem;
+}
+
+.adminDashBtn {
+  width: 360px;
+  height: 50px;
+  margin-bottom: 20px;
+  border-radius: 40px;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 16px;
+  font-weight: 500;
+  font-style: medium;
+  margin-right: 0%;
+  padding: 0%;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 25px;
+  padding-left: 25px;
+  align-items: center;
+}
+.adminDashBtn.blueBtn {
+  background-color: rgba(95, 123, 239, 1);
+  font-size: 16px;
+  font-weight: 500;
+  font-style: medium;
+}
+.rounded-check {
+  width: 42px;
+  height: 42px;
+}
+#showDataIcon {
+  width: 42px;
+  height: 42px;
+}

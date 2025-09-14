@@ -1,0 +1,56 @@
+.center-content {
+  width: 340px;
+  height: 326px;
+  padding: 15px;
+  border-radius: 40px;
+  background-color: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.06);
+}
+.welcome,
+.employeeUserName {
+  color: rgba(255, 255, 255, 1);
+  margin: 20px;
+  text-align: center;
+}
+
+.input-container .openForm,
+.showData {
+  width: 302px;
+  height: 50px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  border-radius: 40px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  position: relative;
+  z-index: 10;
+}
+.input-icon.show,
+.input-icon.open {
+  position: relative;
+  top: 12px;
+  left: 170px;
+}
+button.showData {
+  margin-top: 10px;
+  background-color: rgba(0, 0, 0, 0.15);
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+button.showData:hover {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+button.openForm {
+  background-color: rgba(95, 123, 239, 1);
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+button.openForm:hover {
+  background-color: rgba(95, 123, 239, 0.8);
+}

@@ -1,0 +1,68 @@
+/* production management css start */
+.content-in.prodManagement {
+  width: 1000px;
+  height: 564px;
+  position: absolute;
+  top: 100px;
+  left: 70px;
+  opacity: 1;
+  background-color: rgba(220, 229, 242, 1);
+  margin-top: 40px;
+  padding: 20px;
+  border-radius: 10px;
+}
+input.date {
+  border: 1px solid rgba(188, 213, 230, 1);
+}
+.field .shift2 {
+  border: 1px solid rgba(188, 213, 230, 1);
+}
+.day,
+.night {
+  width: 175px;
+  height: 50px;
+  border: 1px solid rgba(188, 213, 230, 1);
+  border-radius: 7px;
+  padding: 12px 15px;
+  background-color: #f3f4fa;
+}
+input.dayradio,
+.nightradio {
+  height: 16.25px;
+  width: 16.25px;
+  position: relative;
+  top: 4px;
+  margin-right: 10px;
+}
+.select-other {
+  margin-top: 5px;
+  border-radius: 5px;
+}
+.some-text {
+  background-color: white;
+  border: rgba(188, 213, 230, 1);
+  color: black;
+}
+.submitdataBtn {
+  background: linear-gradient(
+    rgba(85, 112, 223, 1) 10%,
+    rgba(33, 44, 90, 1) 100%
+  );
+
+  padding: 10px 15px;
+  color: white;
+  border-radius: 10px;
+  width: 150px;
+  height: 50px;
+  font-weight: 400;
+}
+.showdataBtn {
+  background-color: rgba(50, 50, 50, 1);
+  padding: 10px 15px;
+  color: white;
+  border-radius: 10px;
+
+  width: 150px;
+  height: 50px;
+  font-weight: 400;
+}

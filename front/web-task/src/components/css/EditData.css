@@ -1,0 +1,297 @@
+.edit-outer {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+    135deg,
+    rgba(99, 119, 192, 1),
+    rgba(12, 28, 98, 1)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.editdata-mainbg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.editWhitebg {
+  background-color: rgba(233, 239, 251, 1);
+  z-index: 1;
+  position: relative;
+  width: 90%;
+  max-width: 1180px;
+  min-height: 600px;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  padding: 40px 50px;
+  box-sizing: border-box;
+}
+
+.editWhite {
+  width: 100%;
+  height: 100%;
+}
+
+.editFirstDiv {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.editFirstDiv.back {
+  position: relative;
+  top: -50px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.editData {
+  margin-top: 10px;
+  color: rgba(0, 0, 0, 1);
+  font-family: Arial, sans-serif;
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.outerBlue {
+  width: 100%;
+  max-width: 1080px;
+  border-radius: 12px;
+  background-color: rgba(220, 229, 242, 1);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.frame1,
+.frame2 {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex: 1; /* make both frames flexible */
+  min-width: 300px;
+}
+
+.frame1 input,
+.frame2 input {
+  width: 100%;
+  height: 50px;
+}
+
+.manage_main {
+  font-weight: 600;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.editinput {
+  background-color: white;
+  border: 1px solid rgba(188, 213, 230, 1);
+  border-radius: 10px;
+  color: black;
+  padding: 0 10px;
+}
+
+.editinputblue {
+  border: 1px solid rgba(188, 213, 230, 1);
+  background-color: rgba(233, 239, 251, 1);
+  color: black;
+  border-radius: 10px;
+  padding: 0 10px;
+}
+
+.editinputblue::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.btnsinrows {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btnsinrows button {
+  flex: 1;
+  min-width: 120px;
+  height: 45px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.add {
+  background-color: black;
+  color: white;
+}
+
+.edit {
+  background-color: rgba(150, 170, 255, 1);
+  color: black;
+}
+
+.delete {
+  background-color: rgba(193, 208, 251, 1);
+  color: black;
+}
+
+/* ---------------------------
+   📱 Responsive Design
+---------------------------- */
+@media (max-width: 1024px) {
+  .outerBlue {
+    flex-direction: column; /* stack frames vertically */
+    align-items: stretch;
+  }
+
+  .btnsinrows {
+    flex-direction: column; /* buttons stacked */
+  }
+
+  .btnsinrows button {
+    width: 100%;
+  }
+}
+
+/* Message styling */
+.message {
+  padding: 12px 20px;
+  border-radius: 10px;
+  margin: 15px 0;
+  text-align: center;
+  font-weight: 500;
+  animation: slideIn 0.3s ease-out;
+}
+
+.message.success {
+  background-color: rgba(76, 175, 80, 0.2);
+  border: 1px solid rgba(76, 175, 80, 0.5);
+  color: #4caf50;
+}
+
+.message.error {
+  background-color: rgba(244, 67, 54, 0.2);
+  border: 1px solid rgba(244, 67, 54, 0.5);
+  color: #f44336;
+}
+
+/* Select dropdown styling */
+select.editinput {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: white;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 20px;
+  padding-right: 45px;
+}
+
+select.editinput:focus {
+  outline: none;
+  border-color: #5f7bef;
+  box-shadow: 0 0 0 3px rgba(95, 123, 239, 0.1);
+  transform: translateY(-1px);
+}
+
+select.editinput:hover {
+  border-color: #5f7bef;
+  box-shadow: 0 2px 8px rgba(95, 123, 239, 0.15);
+}
+
+select.editinput:disabled {
+  background-color: #f5f5f5;
+  color: #999;
+  cursor: not-allowed;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23999' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+}
+
+/* Special styling for sub detail select - Override existing input styling */
+select.editinputblue {
+  width: 100% !important;
+  height: 50px !important;
+  padding: 12px 45px 12px 16px !important;
+  border: 1px solid rgba(188, 213, 230, 1) !important;
+  border-radius: 10px !important;
+  font-size: 16px !important;
+  background-color: rgba(233, 239, 251, 1) !important;
+  color: #333 !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 12px center !important;
+  background-size: 16px !important;
+  box-shadow: none !important;
+}
+
+select.editinputblue:focus {
+  outline: none !important;
+  border-color: #5f7bef !important;
+  box-shadow: 0 0 0 2px rgba(95, 123, 239, 0.2) !important;
+}
+
+select.editinputblue:hover {
+  border-color: #5f7bef !important;
+}
+
+select.editinputblue:disabled {
+  background-color: #f5f5f5 !important;
+  color: #999 !important;
+  cursor: not-allowed !important;
+  border-color: #e0e0e0 !important;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23999' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e") !important;
+}
+
+/* Override any existing input styling for select elements */
+select.editinputblue::-ms-expand {
+  display: none;
+}
+
+/* Ensure no multiple background images or conflicting styles */
+select.editinputblue {
+  background: rgba(233, 239, 251, 1) url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e") no-repeat right 12px center !important;
+  background-size: 16px !important;
+}
+
+/* Ensure proper styling across browsers */
+select.editinputblue option {
+  background-color: white;
+  color: #333;
+  padding: 8px 12px;
+}
+
+/* Button disabled state */
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
